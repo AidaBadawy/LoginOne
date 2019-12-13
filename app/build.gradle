@@ -18,6 +18,11 @@ android {
         }
     }
 }
+repositories {
+    maven {
+        url 'https://dl.bintray.com/spark/maven'
+    }
+}
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
@@ -26,4 +31,16 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'androidx.test:runner:1.2.0'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.2.0'
+    implementation 'androidx.cardview:cardview:1.0.0'
+    implementation 'de.hdodenhof:circleimageview:3.0.1'
+
+    //Spark Button
+    implementation 'me.spark:submitbutton:1.0.1'
+
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-analytics:17.2.1'
+    implementation 'com.google.firebase:firebase-auth:19.2.0'
+
 }
+apply plugin: 'com.google.gms.google-services'

@@ -9,7 +9,7 @@
 
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvWelcome"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
@@ -18,6 +18,7 @@
         android:textColor="@android:color/white"
         android:textSize="50sp"
         android:textStyle="bold"
+        android:transitionName="introTransition"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -31,30 +32,20 @@
         android:textColor="#C9CCC9"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView" />
+        app:layout_constraintTop_toBottomOf="@+id/tvWelcome" />
 
     <TextView
-        android:id="@+id/tvRegistertwo"
+        android:id="@+id/tvRegisterone"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:layout_marginBottom="24dp"
-        android:text="Not a meber yet?"
+        android:layout_marginBottom="16dp"
+        android:text="Not a meber yet? Register"
+        android:transitionName="HelpTransition"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/tvRegisterOne"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Register"
-        android:textSize="18sp"
-        android:textColor="@android:color/white"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tvRegistertwo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.055"
-        app:layout_constraintStart_toEndOf="@+id/tvRegistertwo" />
 
     <Button
         android:id="@+id/btnLoginOne"
@@ -63,6 +54,7 @@
         android:layout_marginStart="24dp"
         android:layout_marginTop="72dp"
         android:background="@drawable/button"
+        android:transitionName="buttonTransition"
         android:text="Login"
         android:textAllCaps="false"
         android:textSize="16sp"
